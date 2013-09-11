@@ -306,7 +306,7 @@ body {
 .ember-table-header-container .ui-resizable-handle.ui-resizable-e {
   top: 0;
   height: 100%;
-  width: 5px;
+  width: 15px;
 }
 .ember-table-header-container .ui-resizable-handle.ui-resizable-e:hover {
   cursor: col-resize;
