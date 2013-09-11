@@ -19,6 +19,7 @@ Ember.Component.extend Ember.StyleBindingsMixin, Ember.ResizeHandler,
   hasHeader: yes
   hasFooter: yes
   forceFillColumns: no
+  enableColumnReorder: yes
 
   # specify the view class to use for rendering the table rows
   # TODO(Peter): This probably should go in the view...

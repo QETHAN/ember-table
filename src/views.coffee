@@ -132,7 +132,8 @@ Ember.Table.HeaderRow = Ember.View.extend Ember.ScrollHandlerMixin,
 
   didInsertElement: ->
     @_super()
-    @$('> div').sortable(@get('sortableOption'))
+    if @get('controller.enableColumnReorder')
+      @$('> div').sortable(@get('sortableOption'))
 
   onScroll: (event) ->
     @set 'scrollLeft', event.target.scrollLeft
