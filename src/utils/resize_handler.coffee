@@ -22,6 +22,8 @@ Ember.ResizeHandler = Ember.Mixin.create
   # Browser only allows us to listen to windows resize. This function let us
   # resizeStart and resizeEnd event
   handleWindowResize: (event) ->
+    # This is important, because we want to ignoring bubbling resize events
+    return unless event.target is window
     if not @get 'resizing'
       @set 'resizing', yes
       @onResizeStart?(event)
